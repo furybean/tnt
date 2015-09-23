@@ -27,8 +27,7 @@
   },
   "scripts": {
     "dev": "node_modules/.bin/webpack --watch --devtool inline-source-map",
-    "build": "COMPRESS=1 node_modules/.bin/webpack",
-    "deploy": "COMPRESS=1 node_modules/.bin/webpack --output-public-path //static11.elemecdn.com/eleme/campus/"
+    "build": "COMPRESS=1 node_modules/.bin/webpack"
   }
 }
 
