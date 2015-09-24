@@ -8,7 +8,12 @@
 </head>
 <body>
 <script type="text/javascript">
-  var pagination = new tnt.Pagination();
+  var listData = [];
+  for (var i = 0; i < 100; i++) {
+    listData.push(i);
+  }
+  var itemPerPage = 3;
+  var pagination = new tnt.Pagination(listData, itemPerPage);
   pagination.render();
 </script>
 </body>
