@@ -8,7 +8,14 @@
 </head>
 <body>
 <script type="text/javascript">
-  var pagination = new tnt.Pagination();
+  var options = {
+    currentPage: 6,
+    pageCount: 10,
+    onChange: function(newPage) {
+      console.log(newPage);
+    }
+  };
+  var pagination = new tnt.Pagination(options);
   pagination.render();
 </script>
 </body>

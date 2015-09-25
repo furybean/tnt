@@ -1,3 +1,26 @@
-.pagination {
-  color: red;
+.pagination ul {
+  list-style: none;
+  font-size: 14px;
+}
+
+.pagination ul li {
+  display: inline-block;
+  border: solid 1px #eee;
+  width: 22px;
+  text-align: center;
+  padding: 4px 0;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.pagination ul li.active {
+  border: solid 1px #0089dc;
+  background-color: #0089dc;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination ul li.ellipsis {
+  border: none;
+  cursor: default;
 }
