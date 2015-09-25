@@ -1,9 +1,11 @@
 require('./index.css');
 
+//listData为需要分页的内容，itemPerPage为每页现实条数
 var Pagination = function(listData, itemPerPage) {
   var pageCount = Math.ceil(listData.length / itemPerPage);
   var list = [];
 
+  //更新ul中的列表项
   var resetUl = function(newList) {
     for (var i =0, len = ul.childNodes.length; i < len; i++) {
       ul.removeChild(ul.childNodes[0]);
@@ -13,6 +15,7 @@ var Pagination = function(listData, itemPerPage) {
     }
   }
 
+  //用户每次点击后，更新各列表项的状态
   var updateState = function (currentPage) {
     var newList = [];
     var flag = [];
@@ -53,7 +56,6 @@ var Pagination = function(listData, itemPerPage) {
               updateState(currentPage + 1);
             });
           }
-
         } else if (parseInt(flag[i]) !== currentPage) {
           li.addEventListener('click', function() {
             updateState(parseInt(this.innerHTML));
