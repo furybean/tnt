@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    .btn {
+      padding: 5px 10px;
+      background-color: #0089dc;
+      color: #fff;
+      font-size: 14px;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #00b0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">一般提醒框</div>
+  <div class="btn">自定义延时</div>
+  <div class="btn">关闭后调用回调函数</div>
+  <div class="btn">success</div>
+  <div class="btn">warn</div>
+  <div class="btn">info</div>
+  <div class="btn">error</div>
+  <div class="btn">调用close关闭按钮</div>
+
+  <script type="text/javascript">
+    var btn = document.getElementsByClassName("btn");
+    btn[0].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.open({
+        title: '一般',
+        message: 'This is a notification test.'
+      });
+    });
+    btn[1].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.open({
+        title: '2秒关闭',
+        message: 'This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test.',
+        duration: 2
+      });
+    });
+    btn[2].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.open({
+        title: 'Callback',
+        message: '',
+        onClose: function() {
+          console.log('closed!');
+        }
+      });
+    });
+    btn[3].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.success({
+        title: 'success',
+        message: 'success'
+      });
+    });
+    btn[4].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.warn({
+        title: 'warn',
+        message: 'warn'
+      });
+    });
+    btn[5].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.info({
+        title: 'info',
+        message: 'info'
+      });
+    });
+    btn[6].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.error({
+        title: 'error',
+        message: 'error'
+      });
+    });
+    btn[7].addEventListener('click', function() {
+      var notification = tnt.notification;
+      notification.close('notification_2');
+    });
+  </script>
+</body>
+</html>

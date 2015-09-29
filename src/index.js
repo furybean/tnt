@@ -1,5 +1,6 @@
 var tnt = {
-  Pagination: require('./pagination')
+  Pagination: require('./pagination'),
+  notification: require('./notification')
 };
 
 window.tnt = tnt;
