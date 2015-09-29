@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="btn">一般提醒框</div>
+  <div class="btn">自定义延时</div>
+  <div class="btn">success</div>
+  <div class="btn">warn</div>
+  <div class="btn">info</div>
+  <div class="btn">error</div>
+  <div class="btn">关闭后调用回调函数</div>
+  <script type="text/javascript">
+    var title = ['一般', '2秒关闭', 'success', 'warn', 'info', 'error', 'Callback'];
+    var message = ['This is a notification test.', 'This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test. This is a notification test.', 'success', 'warn', 'info', 'error', ''];
+    var btn = document.getElementsByClassName("btn");
+    var options = [];
+    for (var i = 0, len = btn.length; i < len; i++) {
+      options.push({
+        title: title[i],
+        message: message[i]
+      });
+    }
+    options[1].duration = 1;
+    options[2].style = 'success';
+    options[3].style = 'warn';
+    options[4].style = 'info';
+    options[5].style = 'error';
+    options[6].onClose = function() {
+      console.log('closed');
+    };
+    var bindEvent = function(i) {
+      btn[i].addEventListener('click', function() {
+        var notification = new tnt.Notification(options[i]);
+        notification.render();
+      });
+    };
+    for (i = 0; i < len; i++) {
+      bindEvent(i);
+    }
+  </script>
+</body>
+</html>
