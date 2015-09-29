@@ -1,0 +1,85 @@
+.notification {
+  display: inline-block;
+  width: 320px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: solid 1px #eee;
+  border-radius: 10px;
+  position: fixed;
+  right: 25px;
+  background-color: #fff;
+  transition: opacity 0.2s, top 0.2s;
+  overflow: hidden;
+}
+
+.notification .group {
+  float: left;
+  display: inline-block;
+}
+
+.notification .icon {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 48px;
+  line-height: 42px;
+  text-align: center;
+  width: 48px;
+  border: solid 3px;
+  border-radius: 50%;
+  font-size: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+
+.notification .success {
+  color: #0f0;
+  border-color: #0f0;
+}
+
+.notification .success:before {
+  content: '√';
+}
+
+.notification .error {
+  color: #f60;
+  border-color: #f60;
+}
+
+.notification .error:before {
+  content: '!';
+}
+
+.notification .info {
+  color: #0089dc;
+  border-color: #0089dc;
+}
+
+.notification .info:before {
+  content: 'i';
+}
+
+.notification .warn {
+  color: #fe2;
+  border-color: #fe2;
+}
+
+.notification .warn:before {
+  content: '?';
+}
+
+.notification span {
+  font-size: 16px;
+}
+
+.notification p {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+.notification .closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
