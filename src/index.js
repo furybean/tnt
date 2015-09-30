@@ -1,5 +1,8 @@
+require('./css/iconfont.css');
+
 var tnt = {
-  Pagination: require('./pagination')
+  Pagination: require('./pagination'),
+  DatePicker: require('./datepicker')
 };
 
 window.tnt = tnt;

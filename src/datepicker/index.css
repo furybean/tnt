@@ -1,0 +1,101 @@
+.datepicker {
+  font-size: 12px;
+  width: 260px;
+  border: 1px solid #ddd;
+
+  .hidden {
+    display: none;
+  }
+}
+
+.datepicker-header {
+  position: relative;
+  padding: 5px;
+
+  > label {
+    font-weight: 600;
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: #33bcff;
+      color: #fff;
+    }
+  }
+}
+
+.datepicker-body {
+  position: relative;
+}
+
+.datepicker-prevbtn,
+.datepicker-nextbtn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.datepicker-nextbtn {
+  float: right;
+}
+
+.datepicker table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.datepicker th {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+
+.datepicker td.nextmonth,
+.datepicker td.prevmonth {
+  color: #999;
+}
+
+.datepicker td {
+  text-align: center;
+  padding: 6px 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #33bcff;
+    color: #fff;
+  }
+}
+
+.datepicker td.current {
+  background: #0089dc;
+  color: #fff;
+}
+
+.datepicker-footer {
+  padding: 4px;
+  text-align: right;
+}
+
+.datepicker-todaybtn {
+  border: none;
+  color: #0089dc;
+  background: transparent;
+  line-height: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.datepicker-yeartable td {
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.datepicker-monthtable td {
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
