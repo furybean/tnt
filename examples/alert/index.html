@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alert Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+</head>
+<body>
+  <script type="text/javascript">
+    var alertSuccess = tnt.alert;
+    var alertWarn = tnt.alert;
+    var alertInfo = tnt.alert;
+    var alertError = tnt.alert;
+    alertSuccess.open({
+      title: '成功',
+      message: '成功提示的示例',
+      style: 'success'
+    });
+    alertWarn.open({
+      title: '警告',
+      message: '警告提示的示例',
+      style: 'warn'
+    });
+    alertInfo.open({
+      title: '消息',
+      message: '消息提示的示例',
+      style: 'info',
+      closable: true
+    });
+    alertError.open({
+      title: '错误',
+      message: '错误提示的示例',
+      style: 'error',
+      closable: true,
+      closeText: '知道了',
+      onClose: function() {
+        console.log('closed!');
+      }
+    });
+  </script>
+</body>
+</html>
