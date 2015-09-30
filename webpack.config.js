@@ -5,13 +5,11 @@ const webpack = require('webpack');
 const cssnext = require('cssnext');
 const postcssNested = require('postcss-nested');
 const postcssOpacity = require('postcss-opacity');
-
 var outputFilename = '[name].js';
 
 const rootPaths = [];
 
-var plugins = [
-];
+var plugins = [];
 
 if (process.env.COMPRESS) {
   plugins.push(
@@ -43,7 +41,8 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules|bower_components/, loader: 'babel' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css!postcss') },
-      { test: /\.(gif|png|jpg|svg|ttf|woff2|woff|eot)$/, loader: 'url?limit=20000&name=[path][name].[hash:6].[ext]' }
+      { test: /\.(gif|png|jpg)$/, loader: 'url?limit=20000&name=[path][name].[hash:6].[ext]' },
+      { test: /\.(ttf|svg|woff2|woff|eot)$/, loader: 'url?limit=100&name=[path][name].[hash:6].[ext]' }
     ]
   },
   postcss: function() {
