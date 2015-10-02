@@ -58,6 +58,15 @@
   color: #999;
 }
 
+.datepicker td,
+.datepicker td + td + td + td + td + td + td {
+  color: #ff5454;
+}
+
+.datepicker td + td {
+  color: #000;
+}
+
 .datepicker td {
   text-align: center;
   padding: 6px 5px;
