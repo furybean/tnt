@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup Mixin Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style type="text/css">
+    .float-panel {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+  var floatPanel;
+  var showPanel = function() {
+    floatPanel.open();
+  };
+  window.onload = function() {
+    var Popup = tnt.Popup;
+    floatPanel = {
+      getPopupOptions: function() {
+        return {
+          animation: 'fade'
+        }
+      },
+
+      getDOM: function() {
+        if (!this.dom) {
+          var dom = document.createElement('div');
+          dom.className = 'float-panel';
+
+          this.dom = dom;
+        }
+
+        return this.dom;
+      },
+
+      refresh: function() {
+      }
+    };
+
+    Popup(floatPanel);
+
+    console.dir(floatPanel)
+  };
+</script>
+<button onclick="showPanel()">Show Panel</button>
+</body>
+</html>
