@@ -1,0 +1,138 @@
+.tnt-btn {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  background-color: #eee;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, SimSun, sans-serif;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.5;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button.tnt-btn,
+input.tnt-btn {
+  outline: 0;
+}
+
+.tnt-btn-primary {
+  background-color: #0089dc;
+  border-color: #0089dc;
+  color: #fff;
+}
+
+.tnt-btn-phantom {
+  background-color: #fff;
+}
+
+.tnt-btn:hover,
+.tnt-btn.tnt-btn-phantom:hover {
+  background-color: #fff;
+  color: #0089dc;
+  border-color: #0089dc;
+}
+
+.tnt-btn.tnt-btn-primary:hover {
+  background-color: #4bf;
+  color: #fff;
+  border-color: #4bf;
+}
+
+.tnt-btn-lg {
+  font-size: 14px;
+  padding: 4px 15px;
+}
+
+.tnt-btn-sm {
+  padding: 2px 6px;
+}
+
+.tnt-btn.disabled,
+.tnt-btn.disabled:hover {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: #eee;
+  border-color: #ccc;
+}
+
+.tnt-btn-circle {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.tnt-btn-circle.tnt-btn-lg {
+  height: 31px;
+  width: 31px;
+}
+
+.tnt-btn-circle.tnt-btn-sm {
+  height: 24px;
+  width: 24px;
+}
+
+.tnt-btn-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tnt-btn-group .tnt-btn {
+  padding: 4px 8px;
+  float: left;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.tnt-btn-group-lg .tnt-btn {
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+.tnt-btn-group-sm .tnt-btn {
+  padding: 2px 6px;
+}
+
+.tnt-btn-group .tnt-btn:first-child {
+  margin: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.tnt-btn-group .tnt-btn:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.tnt-btn-group .tnt-btn-primary + .tnt-btn {
+  border-left-color: #0089dc;
+}
+
+.tnt-btn-group .tnt-btn-primary + .tnt-btn-primary {
+  border-left-color: #178;
+}
+
+.tnt-btn-group .tnt-btn-primary:hover {
+  border-left-color: #178;
+}
+
+.tnt-btn-group .tnt-btn:hover+.tnt-btn,
+.tnt-btn-group .tnt-btn-phantom:hover+.tnt-btn {
+  border-left-color: #0089dc;
+}
+
+.tnt-btn-group .tnt-btn-primary:hover+.tnt-btn {
+  border-left-color: #178;
+}
+
+.tnt-btn-group .tnt-btn-primary:first-child {
+  border-left-color: #0089dc;
+}
+
+.tnt-btn-group .tnt-btn-primary:first-child:hover {
+  border-left-color: #4bf;
+}
