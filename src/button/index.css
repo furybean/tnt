@@ -1,0 +1,138 @@
+.btn {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  background-color: #eee;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.5;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button.btn,
+input.btn {
+  outline: 0;
+}
+
+.btn-primary {
+  background-color: #0089dc;
+  border-color: #0089dc;
+  color: #fff;
+}
+
+.btn-phantom {
+  background-color: #fff;
+}
+
+.btn:hover,
+.btn.btn-phantom:hover {
+  background-color: #fff;
+  color: #0089dc;
+  border-color: #0089dc;
+}
+
+.btn.btn-primary:hover {
+  background-color: #4bf;
+  color: #fff;
+  border-color: #4bf;
+}
+
+.btn-lg {
+  font-size: 14px;
+  padding: 4px 15px;
+}
+
+.btn-sm {
+  padding: 2px 6px;
+}
+
+.btn.disabled,
+.btn.disabled:hover {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: #eee;
+  border-color: #ccc;
+}
+
+.btn-circle {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.btn-circle.btn-lg {
+  height: 31px;
+  width: 31px;
+}
+
+.btn-circle.btn-sm {
+  height: 24px;
+  width: 24px;
+}
+
+.btn-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-group .btn {
+  padding: 4px 8px;
+  float: left;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.btn-group-lg .btn {
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+.btn-group-sm .btn {
+  padding: 2px 6px;
+}
+
+.btn-group .btn:first-child {
+  margin: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.btn-group .btn-primary + .btn {
+  border-left-color: #0089dc;
+}
+
+.btn-group .btn-primary + .btn-primary {
+  border-left-color: #178;
+}
+
+.btn-group .btn-primary:hover {
+  border-left-color: #178;
+}
+
+.btn-group .btn:hover+.btn,
+.btn-group .btn-phantom:hover+.btn {
+  border-left-color: #0089dc;
+}
+
+.btn-group .btn-primary:hover+.btn {
+  border-left-color: #178;
+}
+
+.btn-group .btn-primary:first-child {
+  border-left-color: #0089dc;
+}
+
+.btn-group .btn-primary:first-child:hover {
+  border-left-color: #4bf;
+}
