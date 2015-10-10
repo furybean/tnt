@@ -1,6 +1,7 @@
+require('./util');
 require('./css/iconfont.css');
 require('./button/index.css');
-require('./util');
+
 
 var tnt = {
   Pagination: require('./pagination'),
@@ -8,7 +9,8 @@ var tnt = {
   Alert: require('./alert'),
   DatePicker: require('./datepicker'),
   MessageBox: require('./msgbox/msgbox'),
-  Popup: require('./popup')
+  Popup: require('./popup'),
+  FormField: require('./form-field')
 };
 
 window.tnt = tnt;

@@ -1,8 +1,16 @@
-var IncrementalDOM = require('../lib/incremental-dom'),
+var IncrementalDOM = require('./lib/incremental-dom'),
   patch = IncrementalDOM.patch,
   patchOne = IncrementalDOM.patchOne;
 
 class Component {
+  constructor(options) {
+    for (var option in options) {
+      if (options.hasOwnProperty(option)) {
+        this[option] = options[option];
+      }
+    }
+  }
+
   render(parent) {
     var fragment = document.createDocumentFragment();
 

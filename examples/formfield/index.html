@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FormField Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+</head>
+<body>
+<script type="text/javascript">
+  window.onload = function() {
+    var field = new tnt.FormField({ label: '姓名', hintMessage: '给我一个Hint', hintType: 'error' });
+
+    field.render(document.body);
+  };
+</script>
+</body>
+</html>

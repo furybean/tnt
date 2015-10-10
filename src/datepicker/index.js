@@ -78,7 +78,7 @@ require('./index.css');
 
 var days = ['日', '一', '二', '三', '四', '五', '六'];
 
-var Component = require('./Component');
+var Component = require('../Component');
 
 class DatePicker extends Component {
   constructor() {

@@ -16,7 +16,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-datepicker-left-arrow:before { content: "\e600"; }
+.icon-formfield-error:before { content: "\e606"; }
 .icon-msgbox-warning:before { content: "\e601"; }
 .icon-msgbox-success:before { content: "\e602"; }
 .icon-msgbox-error:before { content: "\e603"; }
+.icon-formfield-warning:before { content: "\e605"; }
 .icon-datepicker-right-arrow:before { content: "\e604"; }
