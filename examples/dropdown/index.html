@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <button class="btn btn-primary">下拉列表</button>
+  <script type="text/javascript">
+    var dropdown = new tnt.Dropdown({
+      items: [
+        new tnt.DropdownItem({ text: '第一个菜单项' }),
+        new tnt.DropdownItem({ text: '第二个菜单项' }),
+        new tnt.DropdownItem({ text: '第三个菜单项（不可用）', disabled: true }),
+        new tnt.DropdownItem({ divider: true }),
+        new tnt.DropdownItem({ text: '第四个菜单项' })
+      ]
+    });
+
+    var btn = document.getElementsByTagName('button')[0];
+
+    tnt.Popover.connect(btn, dropdown);
+    setTimeout(function() {
+      tnt.Popover.disconnect(btn, dropdown);
+      console.log('Event Listener Removed!');
+    }, 5000);
+  </script>
+</body>
+</html>

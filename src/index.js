@@ -8,7 +8,12 @@ var tnt = {
   Alert: require('./alert'),
   DatePicker: require('./datepicker'),
   MessageBox: require('./msgbox/msgbox'),
-  Popup: require('./popup')
+  Popup: require('./popup'),
+  Popover: require('./popover'),
+  Dropdown: require('./dropdown').Dropdown,
+  DropdownItem: require('./dropdown').DropdownItem,
+  Progress: require('./progress'),
+  Slider: require('./slider')
 };
 
 window.tnt = tnt;
