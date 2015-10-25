@@ -1,7 +1,6 @@
-require('./util');
 require('./css/iconfont.css');
 require('./button/index.css');
-
+require('./util');
 
 var tnt = {
   Pagination: require('./pagination'),
