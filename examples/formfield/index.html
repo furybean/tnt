@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MsgBox Demo Page</title>
+  <title>FormField Demo Page</title>
   <script src="../../dist/main.js"></script>
   <link href="../../dist/main.css" rel="stylesheet" />
 </head>
 <body>
 <script type="text/javascript">
   window.onload = function() {
-    tnt.MessageBox('title', 'message body', 'warning');
+    var field = new tnt.FormField({ label: '姓名', hintMessage: '给我一个Hint', hintType: 'error' });
+
+    field.render(document.body);
   };
 </script>
 </body>

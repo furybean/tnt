@@ -17,7 +17,7 @@ module.exports = function(target) {
 
   var popupId, visible, openTimer, closeTimer, props, inited;
 
-  var initPopup = function() {
+  var initPopup = function(options) {
     popupId = 'popup-' + idSeed++;
 
     PopupManager.register(popupId, this);
@@ -25,7 +25,7 @@ module.exports = function(target) {
     visible = false;
     openTimer = null;
     closeTimer = null;
-    props = util.merge({}, PopupManager.defaultOptions, this.getPopupOptions && this.getPopupOptions());
+    props = util.merge({}, PopupManager.defaultOptions, this.getPopupOptions && this.getPopupOptions(), options);
   };
 
   var locate = function() {
@@ -261,10 +261,12 @@ module.exports = function(target) {
   //};
 
   var Popup = {
-    open: function() {
+    open: function(options) {
       if (!inited) {
-        initPopup.call(this);
+        initPopup.call(this, options);
         inited = true;
+      } else {
+        props = util.merge({}, PopupManager.defaultOptions, this.getPopupOptions && this.getPopupOptions(), options);
       }
 
       var popup = this;

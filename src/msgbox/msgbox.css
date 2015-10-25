@@ -28,26 +28,14 @@
 
   &.icon-msgbox-success {
     color: #94c852;
-
-    &:before {
-      content: "\e649";
-    }
   }
 
   &.icon-msgbox-warning {
     color: #ff9c00;
-
-    &:before {
-      content: "\e656";
-    }
   }
 
   &.icon-msgbox-error {
     color: #ff4248;
-
-    &:before {
-      content: "\e648";
-    }
   }
 }
 

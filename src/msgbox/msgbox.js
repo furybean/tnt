@@ -73,7 +73,7 @@ var STATUS_CLASS_MAP = {
   error: 'icon-msgbox-error'
 };
 
-var CONFIRM_BUTTON_CLASS = 'btn-primary btn-lg msgbox-confirm';
+var CONFIRM_BUTTON_CLASS = 'btn btn-primary btn-lg msgbox-confirm';
 
 var MessageBoxConstructor = {
   getPopupOptions: function() {
@@ -150,7 +150,7 @@ var MessageBoxConstructor = {
         className: 'msgbox-content',
         content: [{
           tag: 'div',
-          className: 'msgbox-status ' + STATUS_CLASS_MAP[self.get('type')],
+          className: 'msgbox-status iconfont ' + STATUS_CLASS_MAP[self.get('type')],
           key: 'status'
         }, {
           tag: 'div',

@@ -1,6 +1,7 @@
+require('./util');
 require('./css/iconfont.css');
 require('./button/index.css');
-require('./util');
+
 
 var tnt = {
   Pagination: require('./pagination'),
@@ -13,7 +14,8 @@ var tnt = {
   Dropdown: require('./dropdown').Dropdown,
   DropdownItem: require('./dropdown').DropdownItem,
   Progress: require('./progress'),
-  Slider: require('./slider')
+  Slider: require('./slider'),
+  FormField: require('./form-field')
 };
 
 window.tnt = tnt;

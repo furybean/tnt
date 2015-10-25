@@ -78,7 +78,7 @@ require('./index.css');
 
 var days = ['日', '一', '二', '三', '四', '五', '六'];
 
-var Component = require('./Component');
+var Component = require('../Component');
 
 class DatePicker extends Component {
   constructor() {
@@ -267,9 +267,9 @@ class DatePicker extends Component {
     return (<div class="datepicker">
 
       <div class="datepicker-header">
-        <button onclick={ self.prev.bind(self) } class="datepicker-prevbtn icon-arrow-left"></button>
+        <button onclick={ self.prev.bind(self) } class="datepicker-prevbtn iconfont icon-datepicker-left-arrow"></button>
         <label onclick={ self.handleLabelClick.bind(self) }>{ label }</label>
-        <button onclick={ self.next.bind(self) } class="datepicker-nextbtn icon-arrow-right"></button>
+        <button onclick={ self.next.bind(self) } class="datepicker-nextbtn iconfont icon-datepicker-right-arrow"></button>
       </div>
       <div class="datepicker-body">
         <table class={ self.currentView === 'date' ? '' : 'hidden' } onclick={ self.handleDateTableClick.bind(self) }>

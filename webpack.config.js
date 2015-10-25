@@ -7,7 +7,9 @@ const postcssNested = require('postcss-nested');
 const postcssOpacity = require('postcss-opacity');
 var outputFilename = '[name].js';
 
-const rootPaths = [];
+const rootPaths = [
+  path.join(__dirname, './src/css')
+];
 
 var plugins = [];
 
