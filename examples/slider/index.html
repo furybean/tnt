@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    .container {
+      width: 600px;
+      margin: 30px auto 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+<script type="text/javascript">
+  var parent = document.getElementsByClassName('container')[0];
+  var slider1 = new tnt.Slider();
+  var slider2 = new tnt.Slider({
+    min: 10,
+    max: 20,
+    step: 2,
+    defaultValue: 16,
+    showInput: true
+  });
+
+  slider1.render(parent);
+  slider2.render(parent);
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    .container {
+      width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+<script type="text/javascript">
+  var parent = document.getElementsByClassName('container')[0];
+  var progress1 = new tnt.Progress();
+  var progress2 = new tnt.Progress({
+    percent: 30,
+    style: 'warn'
+  });
+  var progress3 = new tnt.Progress({
+    percent: 50,
+    barHeight: 30
+  });
+  var progress4 = new tnt.Progress({
+    percent: 80,
+    style: 'error'
+  });
+  var progress5 = new tnt.Progress({
+    percent: 100,
+    style: 'success'
+  });
+  var progress6 = new tnt.Progress({
+    percent: 80,
+    style: 'error',
+    showInfo: false
+  });
+  var progress7 = new tnt.Progress({
+    percent: 100,
+    style: 'success',
+    showInfo: false
+  });
+  progress1.render(parent);
+  progress2.render(parent);
+  progress3.render(parent);
+  progress4.render(parent);
+  progress5.render(parent);
+  progress6.render(parent);
+  progress7.render(parent);
+</script>
+</body>
+</html>
