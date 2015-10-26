@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    body {
+      height: 1000px;
+    }
+    .container {
+      width: 300px;
+      margin: 100px auto 0;
+      padding: 20px;
+      border: solid 1px #ccc;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <div class="container"></div>
+<script type="text/javascript">
+  var parent1 = document.getElementsByClassName('container')[0];
+  var parent2 = document.getElementsByClassName('container')[1];
+
+  var sticky1 = new tnt.Sticky({
+    content: '固定在顶部'
+  });
+  var sticky2 = new tnt.Sticky({
+    top: 70,
+    content: '固定在距顶部70px的位置'
+  });
+
+  sticky1.render(parent1);
+  sticky2.render(parent2);
+</script>
+</body>
+</html>

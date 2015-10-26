@@ -14,7 +14,8 @@ var tnt = {
   DropdownItem: require('./dropdown').DropdownItem,
   Progress: require('./progress'),
   Slider: require('./slider'),
-  FormField: require('./form-field')
+  FormField: require('./form-field'),
+  Sticky: require('./sticky')
 };
 
 window.tnt = tnt;

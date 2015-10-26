@@ -1,0 +1,13 @@
+.sticky {
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sticky-phantom {
+  box-sizing: border-box;
+}
+
+.sticky.sticky-fixed {
+  position: fixed;
+}
