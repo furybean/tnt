@@ -1,4 +1,5 @@
 require('./css/iconfont.css');
+require('./css/font-awesome.css');
 require('./button/index.css');
 require('./util');
 
