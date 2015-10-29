@@ -16,7 +16,8 @@ var tnt = {
   Progress: require('./progress'),
   Slider: require('./slider'),
   FormField: require('./form-field'),
-  Sticky: require('./sticky')
+  Sticky: require('./sticky'),
+  Accordion: require('./accordion')
 };
 
 window.tnt = tnt;

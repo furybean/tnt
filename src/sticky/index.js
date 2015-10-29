@@ -57,17 +57,13 @@ class Sticky {
         fixed = false;
       }
     });
-
-    return element;
   }
 
   render(parent) {
     if (!parent) {
       parent = document.body;
     }
-    var dom = this.doRender(parent);
-    parent.appendChild(dom);
-    this.dom = dom;
+    this.doRender(parent);
   }
 }
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion Demo Page</title>
+  <script src="../../dist/main.js"></script>
+  <link href="../../dist/main.css" rel="stylesheet" />
+  <style>
+    .container {
+      width: 500px;
+      margin: 40px auto 0;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="container"></div>
+<script type="text/javascript">
+  var parent = document.getElementsByClassName('container')[0];
+
+  var accordion = new tnt.Accordion([{
+    title: '标题一',
+    content: '这里是标题一的内容</br>这里是标题一的内容</br>这里是标题一的内容</br>这里是标题一的内容',
+    active: true,
+    disabled: true
+  }, {
+    title: '标题二',
+    content: '这里是标题二的内容</br>这里是标题二的内容</br>这里是标题二的内容</br>这里是标题二的内容</br>这里是标题二的内容'
+  }, {
+    title: '标题三',
+    content: '这里是标题三的内容</br>这里是标题三的内容</br>这里是标题三的内容'
+  }, {
+    title: '标题四',
+    content: '这里是标题四的内容</br>这里是标题四的内容'
+  }]);
+
+  accordion.render(parent);
+</script>
+</body>
+</html>
