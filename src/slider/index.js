@@ -108,10 +108,9 @@ class Slider {
           return;
         }
         if (!isNaN(this.value)) {
-          console.log((this.value - self.min) * 100 / (self.max - self.min));
           setNewPosition((this.value - self.min) * 100 / (self.max - self.min));
         }
-      })
+      });
     }
 
     return wrapper;

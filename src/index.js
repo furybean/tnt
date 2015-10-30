@@ -1,4 +1,5 @@
 require('./css/iconfont.css');
+require('./css/font-awesome.css');
 require('./button/index.css');
 require('./util');
 
@@ -14,7 +15,9 @@ var tnt = {
   DropdownItem: require('./dropdown').DropdownItem,
   Progress: require('./progress'),
   Slider: require('./slider'),
-  FormField: require('./form-field')
+  FormField: require('./form-field'),
+  Sticky: require('./sticky'),
+  Accordion: require('./accordion')
 };
 
 window.tnt = tnt;
